@@ -15,7 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({ 
     { import = "plugins" }, 
-    -- { import = "phillip.plugins.lsp" }
+    { import = "plugins.lsp" },
 
     -- Useful plugin to show you pending keybinds.
     { 'folke/which-key.nvim', opts = {} },
