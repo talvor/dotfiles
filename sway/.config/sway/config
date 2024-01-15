@@ -36,7 +36,7 @@ input type:keyboard {
 
 input type:touchpad {
 	natural_scroll enabled
-	tap enabled
+	tap disabled
 }
 
 ### Key bindings
