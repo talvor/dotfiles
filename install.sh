@@ -6,3 +6,4 @@ stow --target=$HOME neovim
 stow --target=$HOME nwg-launchers
 stow --target=$HOME sway
 stow --target=$HOME waybar
+stow --target=$HOME zsh
