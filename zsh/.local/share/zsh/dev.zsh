@@ -14,10 +14,9 @@ antigen use oh-my-zsh
 #antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
-antigen theme robbyrussell
+antigen theme agnoster
 
 # Tell Antigen that you're done.
 antigen apply
 
 
-echo "zsh started on dev"
