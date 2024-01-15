@@ -9,7 +9,8 @@ sudo dnf install \
   gcc \
   gcc-c++ \
   make \
-  lazygit
+  lazygit \
+  tmux
 
 mkdir -p $HOME/.local/share/zsh
 if [ ! -f $HOME/.local/share/zsh/antigen.zsh ]; then
