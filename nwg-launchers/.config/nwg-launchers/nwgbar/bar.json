@@ -2,21 +2,21 @@
   {
     "name": "Lock screen",
     "exec": "swaylock -f -c 000000",
-    "icon": "/var/home/phillip/.config/nwg-launchers/nwgbar/system-lock-screen.svg"
+    "icon": "/var/home/phillip/.local/share/nwgbar/system-lock-screen.svg"
   },
   {
     "name": "Logout",
     "exec": "swaymsg exit",
-    "icon": "/var/home/phillip/.config/nwg-launchers/nwgbar/system-log-out.svg"
+    "icon": "/var/home/phillip/.local/share/nwgbar/system-log-out.svg"
   },
   {
     "name": "Reboot",
     "exec": "systemctl reboot",
-    "icon": "/var/home/phillip/.config/nwg-launchers/nwgbar/system-reboot.svg"
+    "icon": "/var/home/phillip/.local/share/nwgbar/system-reboot.svg"
   },
   {
     "name": "Shutdown",
     "exec": "systemctl -i poweroff",
-    "icon": "/var/home/phillip/.config/nwg-launchers/nwgbar/system-shutdown.svg"
+    "icon": "/var/home/phillip/.local/share/nwgbar/system-shutdown.svg"
   }
 ]
