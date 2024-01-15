@@ -9,7 +9,8 @@ rpm-ostree install \
   kitty \
   stow \
   mako \
-  nwg-launchers
+  nwg-launchers \
+  brightnessctl
 ```
 
 ## Setup dev toolbox
