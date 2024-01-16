@@ -11,11 +11,11 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-# Load the theme.
-antigen theme spaceship-prompt/spaceship-prompt
-
 # Tell Antigen that you're done.
 antigen apply
+
+# Start starship prompt
+eval "$(starship init zsh)"
 
 # Aliases
 alias dotfiles="nvim $HOME/git/dotfiles/"
