@@ -19,7 +19,7 @@ eval "$(starship init zsh)"
 
 # Aliases
 alias dotfiles="nvim $HOME/git/dotfiles/"
-
+alias podman="flatpak-spawn --host podman"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
