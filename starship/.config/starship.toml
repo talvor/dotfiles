@@ -13,10 +13,15 @@ $julia\
 $nodejs\
 $nim\
 $rust\
+$lua\
 [\uE0B0 ](fg:#81A1C1 bg:#2E3440)\
 $line_break\
+$time\
 $character
 """
+
+[time]
+disabled = false
 
 [character] # The name of the module we are configuring is 'character'
 success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
