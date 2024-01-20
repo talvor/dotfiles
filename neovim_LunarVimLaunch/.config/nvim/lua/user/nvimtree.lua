@@ -1,5 +1,6 @@
 local M = {
   "nvim-tree/nvim-tree.lua",
+  dependencies = { "nvim-tree/nvim-web-devicons" },
   event = "VeryLazy",
 }
 
@@ -18,7 +19,8 @@ function M.config()
     hijack_netrw = true,
     sync_root_with_cwd = true,
     view = {
-      -- relativenumber = true,
+      width = 35,
+      side = "left",
     },
     renderer = {
       add_trailing = false,
@@ -29,7 +31,7 @@ function M.config()
       root_folder_label = ":t",
       indent_width = 2,
       indent_markers = {
-        enable = false,
+        enable = true,
         inline_arrows = true,
         icons = {
           corner = "└",
