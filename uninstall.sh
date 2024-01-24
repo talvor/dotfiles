@@ -10,3 +10,4 @@ stow --target=$HOME --delete sway
 stow --target=$HOME --delete tmux
 stow --target=$HOME --delete waybar
 stow --target=$HOME --delete zsh
+stow --target=$HOME --delete bash

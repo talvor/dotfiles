@@ -10,3 +10,4 @@ stow --target=$HOME starship
 stow --target=$HOME tmux
 stow --target=$HOME waybar
 stow --target=$HOME zsh
+stow --target=$HOME bash
