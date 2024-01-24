@@ -12,7 +12,8 @@ M.general = {
 			end,
 			"formatting",
 		},
-    ["<leader>gg"] = { "<cmd>LazyGit<cr>", "LazyGit" },
+
+		["<leader>gg"] = { "<cmd>LazyGit<cr>", "LazyGit" },
 	},
 	v = {
 		[">"] = { ">gv", "indent" },
