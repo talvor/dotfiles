@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 sudo dnf copr enable atim/lazygit -y
 sudo dnf install \
@@ -10,7 +10,8 @@ sudo dnf install \
   gcc-c++ \
   make \
   lazygit \
-  tmux
+  tmux \
+  zsh
 
 mkdir -p $HOME/.local/share/zsh
 if [ ! -f $HOME/.local/share/zsh/antigen.zsh ]; then
@@ -18,15 +19,22 @@ if [ ! -f $HOME/.local/share/zsh/antigen.zsh ]; then
   curl -L git.io/antigen > $HOME/.local/share/zsh/antigen.zsh
 fi
 
-if [! command -v nvm &> /dev/null]; then
+if ! [ -x "$(command -v nvm)" ]; then
   # Install node version manager
   echo "Installing nvm"
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+  curl -sS https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | sh
 fi
 
-if [ ! -d $HOME/.tmux/plugins]; then
+if ! [ -x "$(command -v starship)" ]; then
+  # Install starship
+  echo "Installing starship"
+  curl -sS https://starship.rs/install.sh | sh
+fi
+
+if [ ! -d $HOME/.tmux/plugins ]; then
   # Install tmux plugin manager
   echo "Installing tpm"
   mkdir -p $HOME/.tmux/plugins
   git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 fi
+
