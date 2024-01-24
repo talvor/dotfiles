@@ -2,7 +2,11 @@
 
 My dotfiles for Fedora Sericea
 
-## Install dependencies
+## Shells
+ - Host uses `bash`
+ - Toolbox uses `zsh`
+ 
+## Install host dependencies
 
 ```shell
 rpm-ostree install \
@@ -13,27 +17,6 @@ rpm-ostree install \
   brightnessctl
 ```
 
-## Setup dev toolbox
-
-1. Create toolbox
-   ```shell
-   toolbox create dev
-   ```
-2. Install dependencies in toolbox
-   ```shell
-   toolbox enter dev
-   sudo dnf copr enable atim/lazygit -y
-   sudo dnf install \
-     zsh \
-     kitty-terminfo \
-     neovim \
-     fzf \
-     ripgrep \
-     gcc \
-     gcc-c++ \
-     make \
-     lazygit
-```
 
 ## Install dotfiles
 
@@ -47,6 +30,24 @@ rpm-ostree install \
 2. Uncomment the lines in [`install.sh`](./install.sh) of dotfiles you want to install
 3. Execute `./install.sh`.
    Make sure that you run the script in the main dotfiles directory, i.e `cd ~/.dotfiles` first.
+
+## Setup toolboxes
+
+1. Create toolbox
+   ```shell
+   toolbox create <name>
+   ```
+2. Install dependencies in toolbox
+   ```shell
+   toolbox enter <name>
+   cd $HOME/.dotfiles
+   ./setup-toolbox.sh
+   ```
+## Entering toolbox from host
+
+   ```shell
+   enter <name>
+   ```
 
 ## Requirements
 
