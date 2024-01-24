@@ -2,10 +2,12 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
-unamestr=$(uname -n)
-if [[ "$unamestr" == 'fedora' ]]; then
-  source $HOME/.zsh/host.zsh
-elif [[ "$unamestr" == 'toolbox' ]]; then
-  source $HOME/.zsh/dev.zsh
+# User specific aliases and functions
+if [ -d ~/.zshrc.d ]; then
+    for rc in ~/.zshrc.d/*; do
+        if [ -f "$rc" ]; then
+            . "$rc"
+        fi
+    done
 fi
-
+unset rc

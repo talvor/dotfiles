@@ -20,7 +20,6 @@ antigen apply
 eval "$(starship init zsh)"
 
 # Aliases
-alias dotfiles="nvim $HOME/git/dotfiles/"
 alias podman="flatpak-spawn --host podman"
 
 export NVM_DIR="$HOME/.nvm"
