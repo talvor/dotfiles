@@ -14,7 +14,7 @@ function M.config()
       section_separators = { left = "", right = "" },
       disabled_filetypes = {
         statusline = {},
-        winbar = {},
+        -- winbar = {},
       },
       ignore_focus = { "NvimTree" },
       always_divide_middle = true,
@@ -32,6 +32,15 @@ function M.config()
       lualine_x = { "copilot", "encoding", "fileformat", "filetype" },
       lualine_y = { "progress" },
       lualine_z = { "location" },
+    },
+    winbar = {
+        lualine_c = {
+            {
+                "navic",
+                color_correction = nil,
+                navic_opts = nil
+            }
+        }
     },
     extensions = { "quickfix", "man", "fugitive" },
   }
