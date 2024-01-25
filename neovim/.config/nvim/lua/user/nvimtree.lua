@@ -1,20 +1,17 @@
 local M = {
   "nvim-tree/nvim-tree.lua",
   dependencies = { "nvim-tree/nvim-web-devicons" },
-  event = "VeryLazy",
+  event = "VimEnter",
 }
 
 function M.config()
   local wk = require "which-key"
+  local icons = require "user.icons"
+
   wk.register {
     ["<leader>e"] = { "<cmd>NvimTreeToggle<CR>", "Explorer" },
   }
 
-  local icons = require "user.icons"
-
-  vim.g.loaded_netrw = 1
-  vim.g.loaded_netrwPlugin = 1
-  
   require("nvim-tree").setup {
     hijack_netrw = true,
     sync_root_with_cwd = true,
