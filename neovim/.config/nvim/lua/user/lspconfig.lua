@@ -16,7 +16,7 @@ local function lsp_keymaps(bufnr)
   keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 end
 
-M.on_attach = function(client, bufnr)
+function M.on_attach(client, bufnr)
   lsp_keymaps(bufnr)
 
   if client.supports_method "textDocument/inlayHint" then
@@ -30,7 +30,7 @@ function M.common_capabilities()
   return capabilities
 end
 
-M.toggle_inlay_hints = function()
+function M.toggle_inlay_hints()
   local bufnr = vim.api.nvim_get_current_buf()
   vim.lsp.inlay_hint.enable(bufnr, not vim.lsp.inlay_hint.is_enabled(bufnr))
 end
