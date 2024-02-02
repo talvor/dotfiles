@@ -1,9 +1,6 @@
 return {
   {
     "nvim-lualine/lualine.nvim",
-    dependencies = {
-      "AndreM222/copilot-lualine",
-    },
     opts = {
       options = {
         icons_enabled = true,
@@ -17,12 +14,6 @@ return {
           tabline = 1000,
           winbar = 1000,
         },
-      },
-      sections = {
-        lualine_a = { "mode" },
-        lualine_b = { "branch", "diff", "diagnostics" },
-        lualine_c = { "filename" },
-        lualine_x = { "copilot", "encoding", "fileformat", "filetype" },
       },
     },
   },
