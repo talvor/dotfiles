@@ -18,4 +18,5 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH=$PATH:$HOME/.local/bin
 
+source $HOME/.tmux.d/startup.sh
 
