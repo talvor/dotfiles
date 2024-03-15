@@ -1,3 +1,3 @@
 
 # Aliases
-alias podman="flatpak-spawn --host podman"
+# alias podman="flatpak-spawn --host podman"

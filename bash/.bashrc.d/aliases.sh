@@ -15,4 +15,4 @@ alias egrep='egrep --color=auto'
 alias code="flatpak run com.visualstudio.code"
 
 # toolbox
-alias enter='SHELL=/bin/zsh toolbox enter'
+alias enter='SHELL=/bin/zsh toolbox enter dev'
