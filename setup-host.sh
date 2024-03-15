@@ -5,7 +5,7 @@ rpm-ostree install \
 	stow \
 	mako \
 	nwg-launchers \
-	brightnessctl
-
-rpm-osetree install \
+	brightnessctl \
 	podman-compose
+
+systemctl enable --now podman.socket
