@@ -1,4 +1,0 @@
-# Display time
-SPACESHIP_TIME_SHOW=true
-
-SPACESHIP_NODE_SHOW=true
