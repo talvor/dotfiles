@@ -1,0 +1,60 @@
+{
+    "height": 25,
+    "output": "eDP-1",
+    "modules-left": ["sway/workspaces", "sway/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "custom/network", "cpu", "memory", "backlight", "battery"], 
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M}"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": [""]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon} ",
+        "format-charging": "{capacity}% 󱐋 ",
+        "format-plugged": "{capacity}%  ",
+        "format-alt": "{time} {icon} ",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "custom/network": {
+        "exec": "waybarNetworkInfo",
+        "interval": 30,
+        "return-type": "json"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+}
+
