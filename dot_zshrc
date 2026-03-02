@@ -13,4 +13,7 @@ setopt hist_verify
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
-source $HOME/.tmux.d/startup.sh
+if (( $+commands[tmux] )); then
+  source $HOME/.tmux.d/startup.sh
+fi
+
