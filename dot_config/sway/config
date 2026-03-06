@@ -243,12 +243,30 @@ exec_always {
 # Notification
 exec_always mako
 
-# Src : https://github.com/lokesh-krishna/dotfiles/blob/master/nord-v3/config/sway/config
 ## Window decoration
-# class                 border  backgr. text    indicator child_border
-client.focused          #88c0d0 #434c5e #eceff4 #8fbcbb   #88c0d0
-client.focused_inactive #88c0d0 #2e3440 #d8dee9 #4c566a   #4c566a
-client.unfocused        #88c0d0 #2e3440 #d8dee9 #4c566a   #4c566a
-client.urgent           #ebcb8b #ebcb8b #2e3440 #8fbcbb   #ebcb8b
+include catppuccin-frappe
+# target                 title     bg    text   indicator  border
+client.focused           $lavender $base $text  $rosewater $lavender
+client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
+client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+client.urgent            $peach    $base $peach $overlay0  $peach
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+client.background        $base
 
+# # bar
+# bar {
+#   colors {
+#     background         $base
+#     statusline         $text
+#     focused_statusline $text
+#     focused_separator  $base
+#
+#     # target           border bg        text
+#     focused_workspace  $base  $mauve    $crust
+#     active_workspace   $base  $surface2 $text
+#     inactive_workspace $base  $base     $text
+#     urgent_workspace   $base  $red      $crust
+#   }
+# }
+#
 include /etc/sway/config.d/*

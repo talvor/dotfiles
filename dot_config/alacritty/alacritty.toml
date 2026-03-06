@@ -3,8 +3,8 @@
 TERM = "xterm-256color"
 
 [window]
-padding.x = 10
-padding.y = 10
+padding.x = 5
+padding.y = 5
 
 decorations = "None"
 opacity = 0.9
@@ -19,11 +19,11 @@ normal.family = "FiraCode Nerd Font Mono"
 #normal.family = "JetBrainsMono NF"
 
 #regular
-size = 11
+size = 12
 
 [general]
 live_config_reload = true
-import = ["~/.config/alacritty/themes/themes/catppuccin_frappe.toml"]
+import = ["~/.config/alacritty/themes/catppuccin_frappe.toml"]
 
 #for video
 # size = 35.0
